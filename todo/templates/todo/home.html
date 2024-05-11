@@ -1,0 +1,24 @@
+{% extends "todo/base.html" %}
+
+{% block content %}
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<div class="row justify-content-center mt-5">
+        <div class="col-md-7 text-center">
+
+                 <h1>Simply Your Todos. Woo!</h1>
+            <p>Жизнь - веселая штука. Но в то же время она насыщенная. Есть миллион разных дел, которыми вы могли бы заниматься. Но важно то, <u>что</u> вы делаете.  Мы создали <b><i>Todo Woo</i></b>, чтобы помочь вам разобраться во всех ваших возможностях и жить той жизнью, которая для вас важнее всего. Вас ждет новая организованная жизнь.
+</p>
+        {% if user.is_authenticated %}
+            <a role="button" class="btn btn-primary btn-lg" href="{% url 'currenttodos' %}">Поехали</a>
+        {% else %}
+            <a role="button" class="btn btn-primary btn-lg" href="{% url 'signupuser' %}">Поехали</a>
+        {% endif %}
+        </div>
+    </div>
+
+{% endblock %}
